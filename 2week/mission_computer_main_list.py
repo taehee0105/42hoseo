@@ -2,7 +2,7 @@
 parsing_list = []
 try:
     # 로그 파일 열기기
-    with open(r"C:\Users\HOSEO\Desktop\42호서\42호서\문제풀이\2week\mission_computer_main.log", 'r', encoding = 'utf-8') as file:
+    with open(r"./mission_computer_main.log", 'r', encoding = 'utf-8') as file:
         # 줄마다 ',' 파싱 후 제거
         for line in file:
             # 세 개의 필드로 분리 (최대 2번의 split)
@@ -59,7 +59,7 @@ try:
 
         # JSON 문자열을 파일로 저장
         try:
-            with open(r"C:\Users\HOSEO\Desktop\42호서\42호서\문제풀이\2week\mission_computer_main.json", 'w', encoding='utf-8') as json_file:
+            with open(r"./mission_computer_main.json", 'w', encoding='utf-8') as json_file:
                 json_file.write(json_string)
         except FileNotFoundError:
             print('json 파일을 찾을 수 없음')
